@@ -5,11 +5,12 @@ import json
 with open('data/graph.json') as f:
     graph = json.load(f)
 
-@app.route('/'):
+@app.route('/')
+def home():
     return render_template('axiostest.html')
 
 @app.route('/graph')
-def home():
+def graph():
     return jsonify(graph)
 
 if __name__ == '__main__':
