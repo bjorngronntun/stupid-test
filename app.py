@@ -10,7 +10,7 @@ def home():
     return render_template('axiostest.html')
 
 @app.route('/graph')
-def graph():
+def draw_graph():
     return jsonify(graph)
 
 if __name__ == '__main__':
