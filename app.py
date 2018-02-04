@@ -1,11 +1,14 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 app = Flask(__name__)
 import json
 
 with open('data/graph.json') as f:
     graph = json.load(f)
 
-@app.route('/')
+@app.route('/'):
+    return render_template('axiostest.html')
+
+@app.route('/graph')
 def home():
     return jsonify(graph)
 

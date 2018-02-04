@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.js"></script>
+    <style>
+      body {
+        background: gold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hei</h1>
+    <script>
+      var url = "https://thawing-shore-58845.herokuapp.com/graph";
+      axios.get(url)
+      .then(
+        function(response) {
+          console.log(response.data.nodes);
+        }
+      )
+      .catch(
+        function(error) {
+          alert("Die");
+        }
+      );
+    </script>
+  </body>
+</html>
