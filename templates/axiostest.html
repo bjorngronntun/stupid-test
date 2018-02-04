@@ -12,6 +12,7 @@
   </head>
   <body>
     <h1>Hei</h1>
+    <p id="para"></p>
     <script>
       var url = "https://thawing-shore-58845.herokuapp.com/graph";
       axios.get(url)
@@ -20,9 +21,10 @@
           console.log(response.data.nodes);
           var nodes = response.data.nodes;
           var edges = response.data.edges;
+          var para = document.getElementById("para");
 
           for( var node of nodes )  {
-            document.write(`One node has id ${node.data.id}`);
+            para.innerHTML += `One node has id ${node.data.id}<br>`;
           }
         }
       )
