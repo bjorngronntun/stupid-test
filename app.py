@@ -7,7 +7,7 @@ x = np.linspace(0,1,100)
 
 @app.route('/')
 def home():
-    return np.sin(x)
+    return str(np.sin(x))
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
